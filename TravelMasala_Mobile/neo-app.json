@@ -1,0 +1,38 @@
+{
+  "welcomeFile": "/home.html",
+  "routes": [
+    {
+      "path": "/destinations/food",
+      "target": {
+        "type": "destination",
+        "name": "loadFood"
+      },
+      "description": "insert food data"
+    },
+    {
+      "path": "/destinations/sia",
+      "target": {
+        "type": "destination",
+        "name": "getInfo"
+      },
+      "description": "get information"
+    }
+  ],
+  "sendWelcomeFileRedirect": true,
+  "cacheControl": [
+    {
+      "directive": "private",
+      "maxAge": 0,
+      "path": "**.html"
+    },
+    {
+      "directive": "private",
+      "maxAge": 0,
+      "path": "sap-ui-cachebuster-info.json"
+    },
+    {
+      "directive": "public",
+      "maxAge": 0
+    }
+  ]
+}

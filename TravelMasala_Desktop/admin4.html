@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./img/favicon.png" rel="shortcut icon"/>
+        <meta charset="utf-8"/>
+        <meta content="width=1440px, maximum-scale=1.0" name="viewport"/>
+        <link href="./css/admin4.css" rel="stylesheet" type="text/css"/>
+        <meta content="Launchpad by Anima" name="author">
+        </meta>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body style="margin: 0;
+ background: rgba(255, 255, 255, 1.0);">
+        <input id="anPageName" name="page" type="hidden" value="admin4"/>
+        <div class="admin4">
+            <div style="width: 1440px; height: 100%; position:relative; margin:auto;">
+                <div class="rectangle2">
+                </div>
+                <div class="rectangle3">
+                </div>
+                <div class="kimberlygmailcom">
+                    kimberly@gmail.com
+                </div>
+                <img anima-src="./img/admin4-bitmap@2x.png" class="bitmap" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                <a href="admin1.html">
+                    <img anima-src="./img/admin4-bitmap1@2x.png" class="bitmap1" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                </a>
+                <div class="fbconsumptiontrac">
+                    F&amp;B Consumption Track
+                </div>
+                <div class="flightno">
+                    Flight No:
+                </div>
+                <div class="date">
+                    Date:
+                </div>
+                <img anima-src="./img/admin3-line-3.png" class="line3" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                <div class="mskimberlymaddox">
+                    Ms. Kimberly Maddox
+                </div>
+                <div class="krissflyer99484738">
+                    KrissFlyer: 9948473846
+                </div>
+                <div class="email">
+                    Email:
+                </div>
+                <div class="add">
+                    Add:
+                </div>
+                <div class="a9739tryciaturnpike">
+                    9739 Trycia Turnpike Apt. 539, Singapore
+                </div>
+                <div class="fish">
+                    Fish <span id=fish></span>
+                </div>
+                <div class="salad">
+                    Salad<span id=salad></span>
+                </div>
+                <div class="dessert">
+                    Dessert<span id=dessert></span>
+                </div>
+                <div class="bread">
+                    Bread<span id=bread></span>
+                </div>
+                <img anima-src="./img/admin4-line.png" class="line" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                <div class="consumptionbycompo">
+                    Consumption by components for Flight SQ32
+                </div>
+                <div class="consumptionbycompocopy">
+                    Consumption by components
+                </div>
+                <div class="consumptionhistory">
+                    Consumption history<br />
+                </div>
+                <div class="topfullyeatenfood">
+                    Top fully-eaten foods<br />
+                </div>
+                <div class="toppartiallyeaten">
+                    Top partially-eaten foods<br />
+                </div>
+                <div class="topuneatenfoods">
+                    Top uneaten foods<br />
+                </div>
+                <div class="sq32">
+                    SQ32
+                </div>
+                <div class="a09292018">
+                    09/29/2018
+                </div>
+                <img anima-src="./img/admin4-line-4@2x.png" class="line4" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+            </div>
+        </div>
+        <!-- Scripts -->
+        <script>
+            anima_isHidden = function(e) {
+                if (!(e instanceof HTMLElement)) return !1;
+                if (getComputedStyle(e).display == "none") return !0; else if (e.parentNode && anima_isHidden(e.parentNode)) return !0;
+                return !1;
+            };
+            anima_loadAsyncSrcForTag = function(tag) {
+                var elements = document.getElementsByTagName(tag);
+                var toLoad = [];
+                for (var i = 0; i < elements.length; i++) {
+                    var e = elements[i];
+                    var src = e.getAttribute("src");
+                    var loaded = (src != undefined && src.length > 0 && src != 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+                    if (loaded) continue;
+                    var asyncSrc = e.getAttribute("anima-src");
+                    if (asyncSrc == undefined || asyncSrc.length == 0) continue;
+                    if (anima_isHidden(e)) continue;
+                    toLoad.push(e);
+                }
+                toLoad.sort(function(a, b) {
+                    return anima_getTop(a) - anima_getTop(b);
+                });
+                for (var i = 0; i < toLoad.length; i++) {
+                    var e = toLoad[i];
+                    var asyncSrc = e.getAttribute("anima-src");
+                    e.setAttribute("src", asyncSrc);
+                }
+            };
+            anima_pauseHiddenVideos = function(tag) {
+                var elements = document.getElementsByTagName("video");
+                for (var i = 0; i < elements.length; i++) {
+                    var e = elements[i];
+                    var isPlaying = !!(e.currentTime > 0 && !e.paused && !e.ended && e.readyState > 2);
+                    var isHidden = anima_isHidden(e);
+                    if (!isPlaying && !isHidden && e.getAttribute("autoplay") == "autoplay") {
+                        e.play();
+                    } else if (isPlaying && isHidden) {
+                        e.pause();
+                    }
+                }
+            };
+            anima_loadAsyncSrc = function(tag) {
+                anima_loadAsyncSrcForTag("img");
+                anima_loadAsyncSrcForTag("iframe");
+                anima_loadAsyncSrcForTag("video");
+                anima_pauseHiddenVideos();
+            };
+            var anima_getTop = function(e) {
+                var top = 0;
+                do {
+                    top += e.offsetTop || 0;
+                    e = e.offsetParent;
+                } while (e);
+                return top;
+            };
+            anima_loadAsyncSrc();
+            anima_old_onResize = window.onresize;
+            anima_new_onResize = undefined;
+            anima_updateOnResize = function() {
+                if (anima_new_onResize == undefined || window.onresize != anima_new_onResize) {
+                    anima_new_onResize = function(x) {
+                        if (anima_old_onResize != undefined) anima_old_onResize(x);
+                        anima_loadAsyncSrc();
+                    };
+                    window.onresize = anima_new_onResize;
+                    setTimeout(function() {
+                        anima_updateOnResize();
+                    }, 3000);
+                }
+            };
+            anima_updateOnResize();
+            setTimeout(function() {
+                anima_loadAsyncSrc();
+            }, 200);
+        </script>
+        <script src="script_admin4.js"></script>
+        <!-- End of Scripts -->
+    </body>
+</html>
